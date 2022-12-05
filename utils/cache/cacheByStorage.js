@@ -3,10 +3,16 @@ import md5 from '../md5';
 import { uniApiPromisify } from '../promise';
 
 export async function downloadImage(src = '') {
-	const params = { url: src };
 	// 缓存名称
 	const fileUuid = getUuidByFilename(src);
-	console.log('fileUuid', fileUuid);
+	// 获取问价你的后缀
+	// const ext = src.replace(/.+\.$/, '');
+	const ext = src.substring(src.lastIndexOf('.'));
+	console.log('ext', ext);
+	console.log('src', src);
+	const params = { url: src };
+	// , filePath: `static/cache/${fileUuid}${ext}`
+	console.log('params', params);
 	try {
 		// 查询图片
 		const image = await uni.getStorageSync(fileUuid);
@@ -125,6 +131,7 @@ export function setCacheImagesSize(size = 0) {
 	if (!savedSize) {
 		savedSize = 0;
 	}
+	console.log('savedSize', savedSize);
 	savedSize = (new Bigjs(savedSize)).plus(size);
 	// 数值存储
 	uni.setStorageSync('CACHE_IMAGE_SIZE', savedSize);
