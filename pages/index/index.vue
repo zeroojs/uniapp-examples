@@ -32,11 +32,12 @@
 				:key="src"
 				class="image-container"
 			>
-				<CacheImage
+				<!-- <CacheImage
 					:src="src"
 					mode="widthFix"
 					class="full-image"
-				/>
+				/> -->
+				<image :src="src" mode="widthFix" class="full-image"></image>
 				<text>{{ src }}</text>
 			</view>
 		</view>

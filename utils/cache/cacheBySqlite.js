@@ -1,16 +1,15 @@
-import md5 from './md5';
-import { uniApiPromisify } from './promise';
-import { insertImage, findImage, selectImages } from './db/images';
+import md5 from '../md5';
+import { uniApiPromisify } from '../promise';
+import { insertImage, findImage, selectImages } from '../db/images';
 
 export async function downloadImage(src = '') {
 	const params = { url: src };
 	// 缓存名称
 	const fileUuid = getUuidByFilename(src);
-	console.log('fileUuid', fileUuid);
 	try {
 		// 查询图片
 		const image = await findImage(src);
-		console.log('查询图片 image', image);
+		// console.log('查询图片 image', image);
 		if (image) {
 			return image;
 		}

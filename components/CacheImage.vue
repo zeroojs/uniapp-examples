@@ -39,10 +39,10 @@
 			}
 		},
 		methods: {
-			async getLocalSrc(src = '') {
+			getLocalSrc(src = '') {
 				if (!src) return;
 				try {
-					this.localSrc = await rebuildImages(src);
+					this.localSrc = rebuildImages(src);
 					console.log('this.localSrc', this.localSrc);
 				} catch (e) {
 					console.log('转储失败', e);

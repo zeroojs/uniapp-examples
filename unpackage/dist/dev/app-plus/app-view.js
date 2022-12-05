@@ -342,9 +342,13 @@ var render = function() {
               attrs: { _i: "14-" + $32 }
             },
             [
-              _c("CacheImage", {
+              _c("v-uni-image", {
                 staticClass: _vm._$g("15-" + $32, "sc"),
-                attrs: { _i: "15-" + $32 }
+                attrs: {
+                  src: _vm._$g("15-" + $32, "a-src"),
+                  mode: "widthFix",
+                  _i: "15-" + $32
+                }
               }),
               _c("v-uni-text", { attrs: { _i: "16-" + $32 } }, [
                 _vm._v(_vm._$g("16-" + $32, "t0-0"))
