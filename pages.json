@@ -3,13 +3,26 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "Cache"
+				"navigationBarTitleText": "Cache",
+				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path": "pages/bluetooth/bluetooth",
 			"style": {
 				"navigationBarTitleText": "Bluetooth"
+			}
+		},
+		{
+			"path": "pages/canvas/canvas",
+			"style": {
+				"navigationBarTitleText": "Bluetooth"
+			}
+		},
+		{
+			"path": "pages/upgrade-center-app/upgrade-center-app",
+			"style": {
+				"navigationBarTitleText": "APP 更新"
 			}
 		}
 	],
@@ -24,6 +37,7 @@
 		"selectedColor": "#3ad0f9",
 		"borderStyle": "#7A7E83",
 		"backgroundColor": "#ffffff",
+		"height": "83px",
 		"list": [
 			{
 				"pagePath": "pages/index/index",
@@ -36,6 +50,12 @@
 				"iconPath": "static/tabbar/bluetooth.png",
 				"selectedIconPath": "static/tabbar/bluetooth_active.png",
 				"text": "蓝牙"
+			},
+			{
+				"pagePath": "pages/canvas/canvas",
+				"iconPath": "static/tabbar/bluetooth.png",
+				"selectedIconPath": "static/tabbar/bluetooth_active.png",
+				"text": "Canvas"
 			}
 		]
 	},
