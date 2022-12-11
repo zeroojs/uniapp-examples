@@ -1,9 +1,9 @@
 <script>
-	import { initSqllite } from '@/utils/db';
+	// import { initSqllite } from '@/utils/db';
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
-			initSqllite()
+			// initSqllite()
 		},
 		onShow: function() {
 			console.log('App Show')
@@ -14,6 +14,7 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
 	/*每个页面公共css */
+	@import "@/uni_modules/uview-ui/index.scss";;
 </style>
